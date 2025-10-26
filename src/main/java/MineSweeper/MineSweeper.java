@@ -31,11 +31,7 @@ public class MineSweeper extends Application {
                 Tile tile = new Tile();
                 tile.setPrefSize((double) ScreenHeight /10, (double) ScreenWidth /10);
 
-                tile.setOnAction(event -> {
-
-                    tile.setState(TileState.REVEALED);
-
-                });
+                tile.setOnAction(event -> tile.setState(TileState.REVEALED));
 
                 tile.setMine(mines.contains(tileNumber));
                 tileNumber++;
